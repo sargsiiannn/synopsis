@@ -1,3 +1,6 @@
+# Ensures only one instance of SettingsManager is created
+# Shared object for app-wide config
+
 class SettingsManager:
     _instance = None
 
