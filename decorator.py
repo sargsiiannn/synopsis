@@ -1,3 +1,6 @@
+# Wraps a function and changes its output to uppercase
+# Adds behavior without modifying original function
+
 def uppercase_decorator(func):
     def wrapper():
         result = func()
