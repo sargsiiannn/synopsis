@@ -1,3 +1,6 @@
+# Passes support requests through multiple handlers
+# Each level tries to handle it or passes it on
+
 class Handler:
     def __init__(self, next_handler=None):
         self.next = next_handler
@@ -23,9 +26,8 @@ class LevelTwoSupport(Handler):
             return True
         return False
 
-# Setup
 support = LevelOneSupport(LevelTwoSupport())
 
 # Usage
-support.handle("server")  # Goes to LevelTwoSupport
-support.handle("password")  # Handled by LevelOneSupport
+support.handle("server")  
+support.handle("password") 
