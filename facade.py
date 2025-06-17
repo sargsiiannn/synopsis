@@ -1,3 +1,6 @@
+# Simplifies control of multiple subsystems
+# One method runs several complex operations
+
 class Lights:
     def dim(self): print("Lights dimmed")
 
